@@ -39,7 +39,7 @@ function App() {
 
         <a
           className="resume-nav"
-          href="/Hema_Kumari_Resume.pdf"
+          href="/hema_kumari_portfolio/Hema_Kumari_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
