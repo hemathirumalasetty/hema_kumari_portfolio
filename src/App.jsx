@@ -1,21 +1,163 @@
 import './App.css'
 
 function App() {
-  const skills = [
-    'Python',
-    'FastAPI',
-    'Django',
-    'React',
-    'JavaScript',
-    'Machine Learning',
-    'LLMs',
-    'RAG',
-    'LangChain',
-    'SQL',
-    'AWS',
-    'Docker',
-    'Kubernetes',
-    'Git'
+
+  const resumeUrl = `${import.meta.env.BASE_URL}
+Resume.pdf`
+
+  const skillCategories = [
+    {
+      title: 'Programming',
+      icon: '</>',
+      skills: ['Python', 'SQL', 'JavaScript', 'TypeScript', 'Bash']
+    },
+    {
+      title: 'Frontend Development',
+      icon: 'UI',
+      skills: [
+        'React.js',
+        'Redux Toolkit',
+        'React Hooks',
+        'HTML5',
+        'CSS3',
+        'Bootstrap'
+      ]
+    },
+    {
+      title: 'Backend Development',
+      icon: 'API',
+      skills: [
+        'FastAPI',
+        'Django',
+        'Flask',
+        'REST APIs',
+        'Pydantic',
+        'SQLAlchemy',
+        'Microservices'
+      ]
+    },
+    {
+      title: 'AI & Machine Learning',
+      icon: 'AI',
+      skills: [
+        'Scikit-learn',
+        'XGBoost',
+        'NLP',
+        'LLMs',
+        'RAG',
+        'LangChain',
+        'Hugging Face'
+      ]
+    },
+    {
+      title: 'Data & Databases',
+      icon: 'DB',
+      skills: [
+        'PostgreSQL',
+        'MySQL',
+        'SQL Server',
+        'MongoDB',
+        'Redis',
+        'Pandas',
+        'PySpark',
+        'Kafka'
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: '☁',
+      skills: [
+        'AWS',
+        'Azure',
+        'Docker',
+        'Kubernetes',
+        'Git',
+        'Jenkins',
+        'GitHub Actions',
+        'CI/CD'
+      ]
+    }
+  ]
+
+  const experiences = [
+    {
+      company: 'Wells Fargo',
+      location: 'United States',
+      role: 'Senior Software Developer',
+      specialization: 'Python Full Stack / AI & ML',
+      date: 'Jan 2025 – Present',
+      description:
+        'Working on enterprise banking applications supporting customer servicing, account and transaction workflows, operational dashboards, approvals, reporting and data-driven business processes.',
+      skills: [
+        'Python',
+        'FastAPI',
+        'Django',
+        'React.js',
+        'TypeScript',
+        'PostgreSQL',
+        'AI/ML',
+        'RAG',
+        'Azure'
+      ]
+    },
+    {
+      company: 'CDW',
+      location: 'United States',
+      role: 'Senior Software Developer',
+      specialization: 'Python Full Stack',
+      date: 'May 2023 – July 2024',
+      description:
+        'Developed an enterprise technology platform supporting products, customers, orders, inventory, enterprise search, reporting and operational workflows using React and Python services.',
+      skills: [
+        'Python',
+        'FastAPI',
+        'React.js',
+        'Redux Toolkit',
+        'TypeScript',
+        'PostgreSQL',
+        'MongoDB',
+        'AWS',
+        'Docker'
+      ]
+    },
+    {
+      company: 'New York Community Bank',
+      location: 'India',
+      role: 'Python Full Stack Developer',
+      specialization: 'Banking Applications',
+      date: 'Sep 2021 – Mar 2023',
+      description:
+        'Built banking applications supporting customer profiles, account servicing, transaction and payment workflows, internal approvals, reconciliation and operational reporting.',
+      skills: [
+        'Python',
+        'Django',
+        'FastAPI',
+        'React.js',
+        'PostgreSQL',
+        'MongoDB',
+        'AWS',
+        'Docker'
+      ]
+    },
+    {
+      company: 'Darwinbox',
+      location: 'India',
+      role: 'Software Developer',
+      specialization: 'Python',
+      date: 'Aug 2019 – Sep 2021',
+      description:
+        'Worked on an HR technology platform supporting employee information, onboarding, attendance, leave management, organizational workflows, HR operations and reporting.',
+      skills: [
+        'Python',
+        'Django',
+        'Flask',
+        'React.js',
+        'JavaScript',
+        'SQL',
+        'AWS',
+        'Docker'
+      ]
+    }
   ]
 
   return (
@@ -24,9 +166,9 @@ function App() {
       {/* ================= NAVBAR ================= */}
       <nav className="navbar">
 
-        <h2>
+        <a href="#home" className="brand">
           Hema <span>Kumari</span>
-        </h2>
+        </a>
 
         <div className="nav-links">
           <a href="#home">Home</a>
@@ -39,7 +181,7 @@ function App() {
 
         <a
           className="resume-nav"
-          href="/hema_kumari_portfolio/Hema_Kumari_Resume.pdf"
+          href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -54,45 +196,52 @@ function App() {
 
         <div className="hero-content">
 
-          <p className="hello">
-            Hi, I'm
+          <p className="hero-eyebrow">
+            PYTHON • FULL STACK • AI/ML
           </p>
 
           <h1>
-            Hema <span>Kumari</span>
+            Hi, I'm <span>Hema Kumari.</span>
           </h1>
 
           <h2>
-            Python Full Stack Developer & AI/ML Engineer
+            I build full-stack applications and AI-powered solutions.
           </h2>
 
           <p className="hero-description">
-            I build scalable web applications and intelligent AI solutions
-            using Python, FastAPI, React, Machine Learning, LLMs, RAG and AWS.
-            I enjoy solving real-world problems through clean code and
-            innovative technology.
+            Senior Software Developer with 7+ years of experience building
+            scalable full-stack applications using Python, FastAPI, Django,
+            React and cloud technologies.
           </p>
+
+          <div className="hero-tech-stack">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>LLMs</span>
+            <span>RAG</span>
+            <span>AWS</span>
+            <span>Azure</span>
+          </div>
 
           <div className="hero-buttons">
 
-            <a
-              href="#projects"
-              className="primary-button"
-            >
-              View My Projects
+            <a href="#projects" className="primary-button">
+              View Projects
             </a>
 
             <a
-              href="#contact"
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="secondary-button"
             >
-              Contact Me
+              View Resume
             </a>
 
           </div>
 
-
-          {/* SOCIAL LINKS */}
           <div className="social-links">
 
             <a
@@ -100,7 +249,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              GitHub ↗
             </a>
 
             <a
@@ -108,7 +257,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              LinkedIn ↗
             </a>
 
             <a
@@ -116,11 +265,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Medium
-            </a>
-
-            <a href="mailto:hemakumarithirumalasetty8@gmail.com">
-              Email
+              Medium ↗
             </a>
 
           </div>
@@ -128,43 +273,81 @@ function App() {
         </div>
 
 
-        {/* ================= DEVELOPER VISUAL ================= */}
-        <div className="developer-visual">
+        {/* ================= DEVELOPER CARD ================= */}
+        <div className="hero-developer-card">
 
-          <div className="code-box">
+          <div className="terminal-header">
 
-            <div className="code-icon">
-              &lt;/&gt;
+            <div className="terminal-dots">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
 
-            <h3>
-              Building Intelligent Solutions
-            </h3>
+            <p>developer.py</p>
+
+          </div>
+
+          <div className="terminal-content">
 
             <p>
-              Python • AI • Full Stack
+              <span className="code-purple">class</span>{' '}
+              <span className="code-blue">Developer</span>:
+            </p>
+
+            <p className="code-indent">
+              name = <span className="code-string">"Hema Kumari"</span>
+            </p>
+
+            <p className="code-indent">
+              role = <span className="code-string">"Senior Software Developer"</span>
+            </p>
+
+            <p className="code-indent">
+              focus = <span className="code-string">"Full Stack + AI/ML"</span>
+            </p>
+
+            <br />
+
+            <p className="code-indent">
+              skills = [
+            </p>
+
+            <p className="code-double-indent">
+              <span className="code-string">"Python"</span>,
+              <span className="code-string"> "React"</span>,
+            </p>
+
+            <p className="code-double-indent">
+              <span className="code-string">"FastAPI"</span>,
+              <span className="code-string"> "RAG"</span>,
+            </p>
+
+            <p className="code-double-indent">
+              <span className="code-string">"AWS"</span>
+            </p>
+
+            <p className="code-indent">
+              ]
+            </p>
+
+            <br />
+
+            <p>
+              <span className="code-purple">def</span>{' '}
+              <span className="code-blue">build</span>():
+            </p>
+
+            <p className="code-indent">
+              <span className="code-purple">return</span>{' '}
+              <span className="code-string">"Scalable solutions"</span>
             </p>
 
           </div>
 
-          <div className="tech python">
-            Python
-          </div>
-
-          <div className="tech ai">
-            AI / ML
-          </div>
-
-          <div className="tech react">
-            React
-          </div>
-
-          <div className="tech fastapi">
-            FastAPI
-          </div>
-
-          <div className="tech aws">
-            AWS
+          <div className="terminal-status">
+            <span className="status-dot"></span>
+            Available for opportunities
           </div>
 
         </div>
@@ -175,6 +358,10 @@ function App() {
       {/* ================= ABOUT ================= */}
       <section id="about">
 
+        <p className="section-label">
+          GET TO KNOW ME
+        </p>
+
         <h2 className="section-title">
           About Me
         </h2>
@@ -184,11 +371,17 @@ function App() {
           <div>
 
             <p className="section-description">
-              I'm a Python Full Stack Developer and AI/ML Engineer with
-              experience building enterprise applications, REST APIs,
-              data-driven solutions and AI-powered applications.
-              I enjoy learning new technologies and building scalable
-              solutions that solve real business problems.
+              I'm a Senior Software Developer with 7+ years of experience
+              building scalable full-stack web applications using Python,
+              FastAPI, Django, React.js, JavaScript, TypeScript, SQL and
+              cloud technologies.
+            </p>
+
+            <p className="section-description about-second-paragraph">
+              My experience includes secure REST APIs, microservices,
+              database-driven business workflows, enterprise integrations,
+              cloud deployments and selected AI/ML solutions including
+              NLP, LLMs and RAG.
             </p>
 
           </div>
@@ -196,18 +389,24 @@ function App() {
           <div className="about-cards">
 
             <div className="mini-card">
-              <h3>Clean Code</h3>
-              <p>Maintainable and scalable solutions</p>
+              <h3>Full Stack</h3>
+              <p>
+                Modern frontend and scalable Python backend development
+              </p>
             </div>
 
             <div className="mini-card">
-              <h3>Problem Solver</h3>
-              <p>Turning ideas into real-world solutions</p>
+              <h3>AI / ML</h3>
+              <p>
+                Machine learning, NLP, LLM and RAG-based solutions
+              </p>
             </div>
 
             <div className="mini-card">
-              <h3>Continuous Learner</h3>
-              <p>Exploring modern technologies</p>
+              <h3>Cloud</h3>
+              <p>
+                AWS, Azure, Docker and modern deployment practices
+              </p>
             </div>
 
           </div>
@@ -220,16 +419,54 @@ function App() {
       {/* ================= SKILLS ================= */}
       <section id="skills">
 
+        <p className="section-label">
+          MY TOOLKIT
+        </p>
+
         <h2 className="section-title">
           Technical Skills
         </h2>
 
-        <div className="skills">
+        <p className="skills-intro">
+          Technologies and tools I use to build scalable applications,
+          cloud services, data solutions and AI-powered products.
+        </p>
 
-          {skills.map((skill) => (
-            <span key={skill}>
-              {skill}
-            </span>
+        <div className="skills-grid">
+
+          {skillCategories.map((category) => (
+
+            <div
+              className="skill-category"
+              key={category.title}
+            >
+
+              <div className="skill-category-header">
+
+                <div className="skill-icon">
+                  {category.icon}
+                </div>
+
+                <h3>
+                  {category.title}
+                </h3>
+
+              </div>
+
+              <div className="skill-tags">
+
+                {category.skills.map((skill) => (
+
+                  <span key={skill}>
+                    {skill}
+                  </span>
+
+                ))}
+
+              </div>
+
+            </div>
+
           ))}
 
         </div>
@@ -240,83 +477,87 @@ function App() {
       {/* ================= EXPERIENCE ================= */}
       <section id="experience">
 
+        <p className="section-label">
+          CAREER
+        </p>
+
         <h2 className="section-title">
-          Experience
+          Professional Experience
         </h2>
 
-        <div className="experience-grid">
+        <p className="experience-intro">
+          Building enterprise full-stack applications across banking,
+          technology and HR platforms.
+        </p>
 
+        <div className="timeline">
 
-          {/* VANGUARD */}
-          <div className="card">
+          {experiences.map((experience) => (
 
-            <h3>
-              Senior Python Full Stack Developer – AI/ML
-            </h3>
+            <div
+              className="timeline-item"
+              key={`${experience.company}-${experience.date}`}
+            >
 
-            <h4>
-              Vanguard
-            </h4>
+              <div className="timeline-marker">
+                <span></span>
+              </div>
 
-            <p className="date">
-              Jan 2026 – Present
-            </p>
+              <div className="experience-card">
 
-            <p>
-              Building financial-services applications with secure Python
-              APIs, AI-assisted capabilities, React interfaces and
-              cloud-based deployments.
-            </p>
+                <div className="experience-top">
 
-          </div>
+                  <div>
 
+                    <p className="experience-date">
+                      {experience.date}
+                    </p>
 
-          {/* CDW */}
-          <div className="card">
+                    <h3>
+                      {experience.role}
+                    </h3>
 
-            <h3>
-              Python Full Stack Developer – AI/ML
-            </h3>
+                    <p className="experience-specialization">
+                      {experience.specialization}
+                    </p>
 
-            <h4>
-              CDW
-            </h4>
+                  </div>
 
-            <p className="date">
-              Nov 2024 – Dec 2025
-            </p>
+                  <div className="experience-company">
 
-            <p>
-              Developed enterprise Python services and React applications
-              while integrating AI/ML capabilities for search,
-              classification and business workflows.
-            </p>
+                    <h4>
+                      {experience.company}
+                    </h4>
 
-          </div>
+                    <p>
+                      {experience.location}
+                    </p>
 
+                  </div>
 
-          {/* WINGS INTERNATIONAL */}
-          <div className="card">
+                </div>
 
-            <h3>
-              Python Full Stack Developer
-            </h3>
+                <p className="experience-description">
+                  {experience.description}
+                </p>
 
-            <h4>
-              Wings International
-            </h4>
+                <div className="experience-tags">
 
-            <p className="date">
-              Jun 2018 – Apr 2024
-            </p>
+                  {experience.skills.map((skill) => (
 
-            <p>
-              Developed Python backend services, React and Angular
-              applications, data-processing solutions and AWS
-              integrations.
-            </p>
+                    <span key={skill}>
+                      {skill}
+                    </span>
 
-          </div>
+                  ))}
+
+                </div>
+
+              </div>
+
+            </div>
+
+          ))}
 
         </div>
 
@@ -326,92 +567,234 @@ function App() {
       {/* ================= PROJECTS ================= */}
       <section id="projects">
 
+        <p className="section-label">
+          MY WORK
+        </p>
+
         <h2 className="section-title">
           Featured Projects
         </h2>
 
-        <div className="project-grid">
+        <p className="projects-intro">
+          A selection of full-stack and AI/ML projects demonstrating
+          practical experience with Python, React, APIs, machine learning
+          and Generative AI.
+        </p>
 
+
+        <div className="project-grid professional-projects">
 
           {/* PROJECT 1 */}
-          <div className="project-card">
+          <article className="project-card featured-project">
 
-            <div className="project-icon">
-              AI
+            <div className="project-top">
+
+              <div className="project-icon">
+                AI
+              </div>
+
+              <span className="project-number">
+                01
+              </span>
+
             </div>
+
+            <p className="project-type">
+              GENERATIVE AI
+            </p>
 
             <h3>
               AI Document Assistant
             </h3>
 
-            <p>
-              AI-powered document question-answering application using
-              Python, FastAPI, LLMs and RAG.
+            <p className="project-description">
+              Intelligent document question-answering application that
+              processes documents and uses retrieval-augmented generation
+              to provide context-aware answers from document content.
             </p>
 
-            <a
-              href="https://github.com/hemathirumalasetty"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub →
-            </a>
+            <div className="project-features">
 
-          </div>
+              <p>
+                <span>✓</span>
+                Document processing and retrieval
+              </p>
+
+              <p>
+                <span>✓</span>
+                Context-aware question answering
+              </p>
+
+              <p>
+                <span>✓</span>
+                FastAPI backend services
+              </p>
+
+            </div>
+
+            <div className="project-tags">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>LLMs</span>
+              <span>RAG</span>
+              <span>LangChain</span>
+            </div>
+
+            <div className="project-actions">
+
+              <a
+                href="https://github.com/hemathirumalasetty"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </article>
 
 
           {/* PROJECT 2 */}
-          <div className="project-card">
+          <article className="project-card featured-project">
 
-            <div className="project-icon">
-              &lt;/&gt;
+            <div className="project-top">
+
+              <div className="project-icon">
+                &lt;/&gt;
+              </div>
+
+              <span className="project-number">
+                02
+              </span>
+
             </div>
+
+            <p className="project-type">
+              FULL STACK
+            </p>
 
             <h3>
               Full Stack Web Application
             </h3>
 
-            <p>
-              Full-stack application using React, Python, FastAPI
-              and SQL with REST API integration.
+            <p className="project-description">
+              Full-stack web application with a responsive React interface,
+              Python backend services, REST API integration and
+              database-driven application workflows.
             </p>
 
-            <a
-              href="https://github.com/hemathirumalasetty"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub →
-            </a>
+            <div className="project-features">
 
-          </div>
+              <p>
+                <span>✓</span>
+                Responsive React interface
+              </p>
+
+              <p>
+                <span>✓</span>
+                REST API integration
+              </p>
+
+              <p>
+                <span>✓</span>
+                Database-driven workflows
+              </p>
+
+            </div>
+
+            <div className="project-tags">
+              <span>React</span>
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>REST API</span>
+              <span>SQL</span>
+            </div>
+
+            <div className="project-actions">
+
+              <a
+                href="https://github.com/hemathirumalasetty"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </article>
 
 
           {/* PROJECT 3 */}
-          <div className="project-card">
+          <article className="project-card featured-project">
 
-            <div className="project-icon">
-              ML
+            <div className="project-top">
+
+              <div className="project-icon">
+                ML
+              </div>
+
+              <span className="project-number">
+                03
+              </span>
+
             </div>
+
+            <p className="project-type">
+              MACHINE LEARNING
+            </p>
 
             <h3>
               Machine Learning Application
             </h3>
 
-            <p>
-              Machine-learning application for data analysis and
-              predictions using Python, scikit-learn and FastAPI.
+            <p className="project-description">
+              Machine-learning application for preparing structured data,
+              training predictive models and exposing model functionality
+              through Python backend services.
             </p>
 
-            <a
-              href="https://github.com/hemathirumalasetty"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub →
-            </a>
+            <div className="project-features">
 
-          </div>
+              <p>
+                <span>✓</span>
+                Data preparation and feature engineering
+              </p>
+
+              <p>
+                <span>✓</span>
+                Model training and evaluation
+              </p>
+
+              <p>
+                <span>✓</span>
+                Prediction API integration
+              </p>
+
+            </div>
+
+            <div className="project-tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Scikit-learn</span>
+              <span>FastAPI</span>
+              <span>Machine Learning</span>
+            </div>
+
+            <div className="project-actions">
+
+              <a
+                href="https://github.com/hemathirumalasetty"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </article>
 
         </div>
 
@@ -421,44 +804,194 @@ function App() {
       {/* ================= CONTACT ================= */}
       <section id="contact">
 
-        <h2 className="section-title">
-          Let's Connect
-        </h2>
+        <div className="contact-section">
 
-        <p className="section-description">
-          I'm open to discussing software development, Python,
-          AI/ML and full-stack opportunities.
-        </p>
+          <div className="contact-left">
 
-        <div className="contact-buttons">
+            <p className="section-label">
+              LET'S CONNECT
+            </p>
 
-          <a href="mailto:hemakumarithirumalasetty8@gmail.com">
-            Email Me
-          </a>
+            <h2 className="contact-title">
+              Interested in working together?
+            </h2>
 
-          <a
-            href="https://www.linkedin.com/in/Thirumalasetty-Hemakumari"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+            <p className="contact-description">
+              I'm open to opportunities in Python development,
+              full-stack engineering and AI/ML. Feel free to reach
+              out to discuss roles, projects or collaboration.
+            </p>
 
-          <a
-            href="https://github.com/hemathirumalasetty"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
 
-          <a
-            href="https://medium.com/@hemakumarithirumalasetty"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Medium
-          </a>
+            <div className="contact-info">
+
+              <a
+                href="mailto:hemakumarithirumalasetty8@gmail.com"
+                className="contact-item"
+              >
+
+                <div className="contact-icon">
+                  @
+                </div>
+
+                <div>
+                  <span>Email</span>
+                  <p>
+                    hemakumarithirumalasetty8@gmail.com
+                  </p>
+                </div>
+
+              </a>
+
+
+              <a
+                href="https://www.linkedin.com/in/Thirumalasetty-Hemakumari"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-item"
+              >
+
+                <div className="contact-icon">
+                  in
+                </div>
+
+                <div>
+                  <span>LinkedIn</span>
+                  <p>
+                    Connect with me ↗
+                  </p>
+                </div>
+
+              </a>
+
+
+              <a
+                href="https://github.com/hemathirumalasetty"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-item"
+              >
+
+                <div className="contact-icon">
+                  GH
+                </div>
+
+                <div>
+                  <span>GitHub</span>
+                  <p>
+                    View my repositories ↗
+                  </p>
+                </div>
+
+              </a>
+
+
+              <a
+                href="https://medium.com/@hemakumarithirumalasetty"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-item"
+              >
+
+                <div className="contact-icon">
+                  M
+                </div>
+
+                <div>
+                  <span>Medium</span>
+                  <p>
+                    Read my articles ↗
+                  </p>
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          {/* ================= RESUME CARD ================= */}
+          <div className="resume-card">
+
+            <div className="resume-card-top">
+
+              <div className="resume-document-icon">
+                CV
+              </div>
+
+              <div className="resume-status">
+                <span></span>
+                Resume
+              </div>
+
+            </div>
+
+
+            <p className="resume-label">
+              PROFESSIONAL RESUME
+            </p>
+
+            <h3>
+              Hema Kumari
+            </h3>
+
+            <h4>
+              Senior Software Developer
+            </h4>
+
+
+            <div className="resume-divider"></div>
+
+
+            <div className="resume-highlights">
+
+              <div>
+                <strong>7+</strong>
+                <span>Years Experience</span>
+              </div>
+
+              <div>
+                <strong>Python</strong>
+                <span>Full Stack</span>
+              </div>
+
+              <div>
+                <strong>AI/ML</strong>
+                <span>LLM & RAG</span>
+              </div>
+
+            </div>
+
+
+            <p className="resume-description">
+              View my complete professional experience,
+              technical skills, project responsibilities and education.
+            </p>
+
+
+            <div className="resume-actions">
+
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resume-view-button"
+              >
+                View Resume
+              </a>
+
+              <a
+                href={resumeUrl}
+                download="Hema_Kumari_Resume.pdf"
+                className="resume-download-button"
+              >
+                Download PDF ↓
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
