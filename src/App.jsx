@@ -2,8 +2,7 @@ import './App.css'
 
 function App() {
 
-  const resumeUrl = `${import.meta.env.BASE_URL}
-Resume.pdf`
+  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
 
   const skillCategories = [
     {
@@ -182,10 +181,9 @@ Resume.pdf`
         <a
           className="resume-nav"
           href={resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          download="resume.pdf"
         >
-          View Resume
+          Download Resume
         </a>
 
       </nav>
@@ -233,11 +231,10 @@ Resume.pdf`
 
             <a
               href={resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="resume.pdf"
               className="secondary-button"
             >
-              View Resume
+              Download Resume
             </a>
 
           </div>
@@ -300,11 +297,17 @@ Resume.pdf`
             </p>
 
             <p className="code-indent">
-              role = <span className="code-string">"Senior Software Developer"</span>
+              role ={' '}
+              <span className="code-string">
+                "Senior Software Developer"
+              </span>
             </p>
 
             <p className="code-indent">
-              focus = <span className="code-string">"Full Stack + AI/ML"</span>
+              focus ={' '}
+              <span className="code-string">
+                "Full Stack + AI/ML"
+              </span>
             </p>
 
             <br />
@@ -340,7 +343,9 @@ Resume.pdf`
 
             <p className="code-indent">
               <span className="code-purple">return</span>{' '}
-              <span className="code-string">"Scalable solutions"</span>
+              <span className="code-string">
+                "Scalable solutions"
+              </span>
             </p>
 
           </div>
@@ -927,7 +932,6 @@ Resume.pdf`
 
             </div>
 
-
             <p className="resume-label">
               PROFESSIONAL RESUME
             </p>
@@ -939,7 +943,6 @@ Resume.pdf`
             <h4>
               Senior Software Developer
             </h4>
-
 
             <div className="resume-divider"></div>
 
@@ -965,8 +968,9 @@ Resume.pdf`
 
 
             <p className="resume-description">
-              View my complete professional experience,
-              technical skills, project responsibilities and education.
+              Download my complete professional resume including
+              technical skills, professional experience,
+              project responsibilities and education.
             </p>
 
 
@@ -974,16 +978,15 @@ Resume.pdf`
 
               <a
                 href={resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="resume.pdf"
                 className="resume-view-button"
               >
-                View Resume
+                Download Resume
               </a>
 
               <a
                 href={resumeUrl}
-                download="Hema_Kumari_Resume.pdf"
+                download="resume.pdf"
                 className="resume-download-button"
               >
                 Download PDF ↓
