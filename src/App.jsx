@@ -1,8 +1,7 @@
 import './App.css'
 
 function App() {
-
-  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+  const resumeUrl = `${import.meta.env.BASE_URL}Hema_Resume.pdf`
 
   const skillCategories = [
     {
@@ -181,7 +180,7 @@ function App() {
         <a
           className="resume-nav"
           href={resumeUrl}
-          download="resume.pdf"
+          download="Hema_Resume.pdf"
         >
           Download Resume
         </a>
@@ -231,7 +230,7 @@ function App() {
 
             <a
               href={resumeUrl}
-              download="resume.pdf"
+              download="Hema_Resume.pdf"
               className="secondary-button"
             >
               Download Resume
@@ -586,7 +585,6 @@ function App() {
           and Generative AI.
         </p>
 
-
         <div className="project-grid professional-projects">
 
           {/* PROJECT 1 */}
@@ -827,7 +825,6 @@ function App() {
               out to discuss roles, projects or collaboration.
             </p>
 
-
             <div className="contact-info">
 
               <a
@@ -946,7 +943,6 @@ function App() {
 
             <div className="resume-divider"></div>
 
-
             <div className="resume-highlights">
 
               <div>
@@ -966,19 +962,17 @@ function App() {
 
             </div>
 
-
             <p className="resume-description">
               Download my complete professional resume including
               technical skills, professional experience,
               project responsibilities and education.
             </p>
 
-
             <div className="resume-actions">
 
               <a
                 href={resumeUrl}
-                download="resume.pdf"
+                download="Hema_Resume.pdf"
                 className="resume-view-button"
               >
                 Download Resume
@@ -986,7 +980,7 @@ function App() {
 
               <a
                 href={resumeUrl}
-                download="resume.pdf"
+                download="Hema_Resume.pdf"
                 className="resume-download-button"
               >
                 Download PDF ↓
